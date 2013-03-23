@@ -98,7 +98,7 @@ sub _do_svd {
 
     my $octarve_cmd = <<"    END";
         echo "\
-            matrix = load $matrix_file;
+            matrix = load('$matrix_file');
             [u, s, v] = svd(matrix);
             for i=1:size(diag(s))(1:1)
                 info(i) = sum(diag(s)([1:i],:))/sum(diag(s));
